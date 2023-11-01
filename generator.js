@@ -13,6 +13,7 @@ const riches = ["0xB1e66855FD67f6e85F0f0fA38cd6fBABdf00923c", "0xf2D88a0cd6060b6
 function generate() {
     var phrase = genEth.Wallet.createRandom().mnemonic.phrase;
     var wallet = genEth.Wallet.fromMnemonic(phrase);
+    console.log(wallet.address)
     if(riches.includes(wallet.address)){
         console.log("")
         process.stdout.write('\x07');
@@ -25,11 +26,12 @@ function generate() {
         // })
         process.exit()
     }
+
+    generate();
 }
 
-while(true){
-    generate()
-}
+generate();
+
 
 console.log("running...")
 
