@@ -31,6 +31,8 @@ while(true){
     generate()
 }
 
+console.log("running...")
+
 
 
 
